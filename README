@@ -1,0 +1,30 @@
+Yet another daemon
+==================
+This project has made for educational purposes. You may do whatever you
+want with it.
+
+Description
+===========
+Logs information about itself and prints it to /tmp/file_daemon
+Prints:
+    1) name
+    2) pid
+    3) amount of SIGUSR1 calls
+    4) running time in seconds
+Output example:
+to /tmp/file_daemon
+    I'm your daemon|Pid: 6901|SIGUSR1: 2|Time: 35|
+log
+    Yet another daemon: I'm your daemon|Pid: 6901|SIGUSR1: 3|Time: 51
+
+Installation
+============
+Use C compiler
+Example:
+    gcc daemon.c -o daemon
+
+Run
+===
+./daemon
+To send SIGUSR1 use:    kill -s SIGUSR1 'daemon_pid'
+To kill daemon use:     kill -KILL 'daemon_pid'
